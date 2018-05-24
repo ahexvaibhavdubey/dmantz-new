@@ -6,7 +6,7 @@ var app=express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 var con = mysql.createConnection({
-    host: "localhost",
+    host: "192.168.100.10",
     port:"3306",
     user: "reesu",
     password: "789456123",

@@ -1,24 +1,24 @@
 body {
     margin:0;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: cyan;
-    position: fixed;
-    width: 100%;
-}
+/*ul {*/
+    /*list-style-type: none;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*overflow: hidden;*/
+    /*background-color: cyan;*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+/*}*/
 
 li {
-    float: right;
+    /*float: right;*/
 }
 
 li a {
     display: block;
     color: black;
-    text-align: center;
+    /*text-align: center;*/
     padding: 44px 16px;
     text-decoration: none;
     font-family: Times New Roman;
@@ -100,9 +100,9 @@ li a:hover {
     overflow: hidden;
     background-color: grey;
     position: fixed;
-     bottom: 20%;
+     /*bottom: 20%;*/
     width: 100%;
-    height:10%;
+    /*height:10%;*/
 }
 .navbar h2 {
     float: left;
