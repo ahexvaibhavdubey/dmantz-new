@@ -12,7 +12,18 @@
 // end of the google maps code.
 
 
-
+function careers(){
+	var xhttp = new XMLHttpRequest();
+    var url = "http://localhost:3004/careers";
+    xhttp.open("GET", url, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onreadystatechange = function () {
+        if ((this.readyState == 4) && (this.status == 200)) {
+            console.log("after getting response" + xhttp.responseText);
+        }
+    };
+    xhttp.send(params);
+}
 
 
 window.onscroll=function() {scrollFunction()};
@@ -24,18 +35,26 @@ function scrollFunction() {
         document.getElementById("myBtn").style.display = "none";
     }
 }
+
+
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
-
-
-
-
 function myDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
-}
+};
+//
+//$(function() {
+//	$( 'ul.nav li' ).on( 'click', function() {
+//	    $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+//	    $( this ).addClass( 'active' );
+//	});
+//	});
+//$(window).on('beforeunload', function(){
+//	  $(window).scrollTop(0);
+//	});
 
 
 
@@ -46,6 +65,7 @@ function myDropdown() {
     //document.getElementById("Contact_Section1").style.display= "block";
     console.log("hello");
 } */
+
 function resetform1()
 {
     console.log("resetform1 clicked.Line no-1.");
@@ -54,7 +74,7 @@ function resetform1()
     //document.getElementById("cEmail_box").value="";
     //document.getElementById("Country_box").value="";
     //document.getElementById("Subject_box").value="";
-    document.getElementById("contact").reset();
+    document.getElementById("signup").reset();
     console.log("resetform1 clicked.Line no-2.");
 }
 function ContactSection()
@@ -71,7 +91,7 @@ function ContactSection()
             return false;
         }
         else if (clname == "") {
-            document.getElementById("cerrorBox2").innerHTML = "Pleas enter the last name";
+            document.getElementById("cerrorBox2").innerHTML = "Please enter the last name";
 
             return false;
         }
@@ -81,15 +101,15 @@ function ContactSection()
             return false;
         }
         else if (!emailRegex.test(cfemail)) {
-            document.getElementById("cerrorBox").innerHTML = "Please enter the valid email";
+            document.getElementById("cerrorBox4").innerHTML = "Please enter the valid email";
             return false;
         }
         else if (country == "") {
-            document.getElementById("cerrorBox").innerHTML = "Please select one country";
+            document.getElementById("cerrorBox5").innerHTML = "Please select one country";
             return false;
         }
         else if (Subject == "") {
-            document.getElementById("cerrorBox").innerHTML = "Please enter the the text";
+            document.getElementById("cerrorBox6").innerHTML = "Please enter the the text";
             return false;
         }
         /*else if (!(Subject == "")) {
@@ -127,6 +147,7 @@ function ContactSection()
         xhttp.send(params);
     }
 
+resetform1();
 }
 
 
